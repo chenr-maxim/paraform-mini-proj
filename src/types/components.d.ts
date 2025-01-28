@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
 
-export interface LayoutProps {
+export interface ILayoutProps {
   children: ReactNode;
 }
 
@@ -18,12 +18,12 @@ export interface IFormLabel {
   type?: "text" | "email" | "file" | "textarea";
 }
 
-export interface Department {
+export interface IDepartment {
   id: number;
   name: string;
 }
 
-export interface Office {
+export interface IOffice {
   id: number;
   name: string;
 }
@@ -34,8 +34,8 @@ export interface IJob {
   status: string;
   created_at: string;
   updated_at: string;
-  offices?: Office[];
-  departments?: Department[];
+  offices?: IOffice[];
+  departments?: IDepartment[];
   [key: string]: unknown;
 }
 

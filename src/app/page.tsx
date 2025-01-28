@@ -4,32 +4,6 @@ import SingleJobListing from "@/components/SingleJobListing";
 
 import styles from "../styles/app.module.scss";
 
-// async function fetchAllOrganizationsJobPosts() {
-//   try {
-//     const response = await axios.get(`${process.env.GREENHOUSE_URL}/jobs`, {
-//       headers: {
-//         Authorization: `Basic ${token}`,
-//       },
-//       params: {
-//         per_page: 10,
-//       },
-//     });
-
-//     return response.data;
-//   } catch (error) {
-//     const err = error as AxiosError;
-//     console.error(
-//       "Error fetching job posts:",
-//       err.response?.data || err.message
-//     );
-
-//     return {
-//       error: "Failed to fetch job posts",
-//       details: err.response?.data || err.message,
-//     };
-//   }
-// }
-
 async function fetchJob() {
   const token = Buffer.from(`${process.env.API_KEY}:`).toString("base64");
 
