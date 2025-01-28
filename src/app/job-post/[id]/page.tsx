@@ -1,13 +1,10 @@
 import React from "react";
 import axios from "axios";
 
-import styles from "../../../styles/job-post-details.module.scss";
 import ApplicationForm from "@/components/ApplicationForm";
 import JobDetails from "@/components/JobDetails";
 
-interface JobDetailsProps {
-  params: { id: string };
-}
+import styles from "../../../styles/job-post-details.module.scss";
 
 const fetchJobDetails = async (id: string) => {
   const token = Buffer.from(`${process.env.API_KEY}:`).toString("base64");
@@ -51,8 +48,13 @@ const fetchSampleJobPostDetails = async () => {
   }
 };
 
-const JobPostDetailsPage = async ({ params }: JobDetailsProps) => {
-  const job = await fetchJobDetails(params.id);
+const JobPostDetailsPage = async ({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) => {
+  const { id } = await params;
+  const job = await fetchJobDetails(id);
   const sampleJobPost = await fetchSampleJobPostDetails();
 
   console.log(sampleJobPost, "sampleJobPost");
