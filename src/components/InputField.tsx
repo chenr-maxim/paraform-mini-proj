@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../styles/input-component.module.scss";
+import styles from "../styles/input-field.module.scss";
 import { IFormData, IFormLabel } from "@/types/components";
 
 interface InputFieldProps {
