@@ -1,9 +1,24 @@
 .layout-header {
-  height: 15vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  padding: 16px;
   border-bottom: 1px solid #ccc;
+
+  .home-icon {
+    color: #333;
+    margin-right: 16px;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      color: #007bff;
+    }
+  }
 }
 
 .layout-container {
