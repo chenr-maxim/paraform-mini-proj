@@ -1,5 +1,4 @@
 import axios, { AxiosError } from "axios";
-import Layout from "@/components/Layout";
 import SingleJobListing from "@/components/SingleJobListing";
 
 import styles from "../styles/app.module.scss";
