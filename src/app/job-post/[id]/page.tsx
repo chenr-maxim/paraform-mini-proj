@@ -57,12 +57,11 @@ const JobPostDetailsPage = async ({
   const job = await fetchJobDetails(id);
   const sampleJobPost = await fetchSampleJobPostDetails();
 
-  console.log(sampleJobPost, "sampleJobPost");
   return (
     <div className={styles["job-post-details-container"]}>
-      <div className={styles["job-post-details"]}>
-        <JobDetails job={sampleJobPost} />
-      </div>
+      {/* <div className={styles["job-post-details"]}> */}
+      <JobDetails job={sampleJobPost} />
+      {/* </div> */}
       <ApplicationForm job={job} />
     </div>
   );

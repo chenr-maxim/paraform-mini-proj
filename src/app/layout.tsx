@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
 import Link from "next/link";
-import { AiOutlineHome } from "react-icons/ai";
 import { Inter } from "next/font/google";
 
 import "../app/globals.css";
@@ -23,8 +22,8 @@ export default function RootLayout({
     <html lang="en" className={inter.className}>
       <body>
         <header className={styles["layout-header"]}>
-          <Link href="/" className={styles["home-icon"]}>
-            <AiOutlineHome size={28} />
+          <Link href="/" className={styles["company-name"]}>
+            Paraform
           </Link>
         </header>
         <Layout>{children}</Layout>

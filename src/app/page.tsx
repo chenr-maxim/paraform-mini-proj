@@ -36,19 +36,17 @@ export default async function Home() {
   const job = await fetchJob();
 
   return (
-    <Layout>
-      <div className={styles["app-container"]}>
-        <div className={styles["job-listings-container"]}>
-          <div className={styles["job-listings-header"]}>
-            <span>Title</span>
-            <span>Location</span>
-            <span>Department</span>
-          </div>
-          <div className={styles["job-listings-grid"]}>
-            <SingleJobListing job={job} />
-          </div>
+    <div className={styles["app-container"]}>
+      <div className={styles["job-listings-container"]}>
+        <div className={styles["job-listings-header"]}>
+          <span>Title</span>
+          <span>Location</span>
+          <span>Department</span>
+        </div>
+        <div className={styles["job-listings-grid"]}>
+          <SingleJobListing job={job} />
         </div>
       </div>
-    </Layout>
+    </div>
   );
 }
